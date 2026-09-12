@@ -54,7 +54,7 @@
                             @endphp
                             <li class="sidebar-item @if($active) active @endif">
                                 <a class="sidebar-link" href="{{ $value['url'] }}">
-                                    <x-admin::icon :icon="$value['icon'] ?? null" />
+                                    <x-admin::icon :icon="$value['icon'] ?? 'file'" />
                                     <span class="align-middle">{{ $value['label'] }}</span>
                                 </a>
                             </li>
@@ -126,7 +126,7 @@
                                 <div class="col-auto ms-auto text-end mt-n1">
                                     @foreach($actions as $action)
                                         <a href="{{ $action['url'] }}" 
-                                            class="btn btn-{{ $action['btn'] ?? 'primary' }}">
+                                            class="btn btn-{{ $action['button'] ?? 'primary' }}">
                                                 <x-admin::icon :icon="$action['icon'] ?? null" />
                                             {{ $action['label'] }}</a>
                                     @endforeach
