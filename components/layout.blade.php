@@ -1,5 +1,6 @@
 @props([
     'title' => config('app.name', 'AdminKit'),
+    'h1' => null,
     'copyright' => '<a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>AdminKit</strong></a>',
     'footerMenu' => [],
     'breadcrumbs' => [],
@@ -119,7 +120,7 @@
                         <div class="row mb-2 mb-xl-3">
                             @if($title)
                                 <div class="col-auto d-none d-sm-block">
-                                    <h1 class="h3">{{ $title}}</h1>
+                                    <h1 class="h3">{{ $h1 ?? $title}}</h1>
                                 </div>
                             @endif
                             @if($actions)
